@@ -1,0 +1,7 @@
+exp_dir_base: /juno/u/msalvato/predictive_hands_experiments
+
+mano_smplx_file: /scr-ssd/msalvato/grab_data/grab/MANO_SMPLX_vertex_ids.pkl
+grab_path: /scr-ssd/msalvato/grab_data/grab/grab_dataset/grab
+model_path: /scr-ssd/msalvato/grab_data/grab/models_smplx_v1_1/models
+data_path: /scr-ssd/msalvato/grab_data/grab/predictive_data_baseline
+image_temp_path: /scr-ssd/msalvato/grab_data/grab/predictive_data_baseline/image_temp

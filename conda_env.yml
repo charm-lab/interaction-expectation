@@ -1,0 +1,8 @@
+channels:
+  - defaults
+  - nvidia
+dependencies:
+  - python=3.9.5
+  - pyyaml
+  - joblib
+  - seaborn

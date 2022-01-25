@@ -1,0 +1,25 @@
+experiment_name: data_generation
+hands: [right, left]
+vis_hands: [right]
+rot_noise: null
+transl_noise: null
+joint_noise_error: null
+joint_noise: null
+transl_noise_error: null
+baseline_window: null
+
+# Dataset
+regenerate_data: True
+parallel_generation: True
+visualize_generation: False
+obj_centered: True
+
+# Visualization
+frame_render: 2 #render every n frames
+  
+# Metadata
+datetime: null
+
+# Other
+device_type: cuda
+

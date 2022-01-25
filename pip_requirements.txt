@@ -1,0 +1,7 @@
+yappi==1.3.2
+matplotlib==3.3.4
+tensorflow_graphics==2021.8.6
+scipy==1.7.0
+smplx==0.1.28
+Pillow==8.3.2
+tqdm==4.62.3

@@ -1,0 +1,23 @@
+experiment_name: baseline
+hands: [right]
+vis_hands: [right]
+joint_noise_error: null
+transl_noise_error: null
+baseline_projection_window: 12
+obj_names: [alarmclock, banana, eyeglasses, hand, stamp, cylindermedium, cubemedium, flute, cubesmall, cylinderlarge]
+parallel_generation: True
+visualize_generation: False
+obj_centered: True
+
+test_ranges: [24]
+times_ahead: [25]
+
+# Visualization
+frame_render: 2 #render every n frames
+  
+# Metadata
+datetime: null
+
+# Other
+device_type: cuda
+

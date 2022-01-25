@@ -1,0 +1,96 @@
+experiment_name: fold4_single_copy
+continue_experiment: True
+
+# Network
+network_type: denselstm
+dense_dim_1: 2000
+dense_dim_2: 4000
+lr: 1e-4
+decay: 0
+
+# Loss
+train_objective: [0,1] #[recon_error, contact_error]
+contact_loss: mse #kl_div, mse, arg_dist
+smoothing: gaussian #[inverse, gaussian, None]
+
+# Hardware
+gpu_num: 0
+
+# Experiment
+profile: False
+batch_size: 1
+epochs: 100
+epoch_checkmarks: 10
+
+epoch_draw: False
+draw_first_epoch: True
+epoch_draw_checkmarks: 500
+seed: 0
+
+experiment_type: config_exp #['n_fold', 'config_exp']
+parallel_load: False
+test_ranges: [12]
+times_ahead: [12]
+single_times: True
+random_start: True
+contact_out: True
+points_out: False
+image_frequency: 10
+joint_noise_level: null #mm
+transl_noise_level: null #mm
+
+# Dataset
+first_correct_sigma: 5 #these are for creating contact vector
+first_correct_width: 21
+data_type: joints #joints, vertices
+use_dists: True
+hands: [right]
+vis_hands: [right]
+obj_centered: True
+until_contact: True
+
+# Results
+experiment_dir: null
+models_dir: null
+results_dir: null
+config_dir: null
+
+# Visualization
+frame_render: 2 #render every n frames
+  
+# Metadata
+datetime: null
+
+# filter Conditions
+# if null, load all for that condition
+train_conditions: 
+  subj_id: [s1, s2, s3, s4, s5, s6]
+  intent: null
+  obj_name: null
+
+val_conditions:
+  subj_id: [s9, s10]
+  intent: null
+  obj_name: null
+
+test_conditions:
+  subj_id: [s7, s8]
+  intent: null
+  obj_name: null
+
+
+## Conditions for object split
+#train_conditions:
+#  subj_id: null
+#  intent: null
+#  obj_name: [ pyramidlarge, stanfordbunny, gamecontroller, pyramidsmall, scissors, bowl, apple, duck, cup, phone, toruslarge, wineglass, pyramidmedium, camera, spheresmall, teapot, mouse, elephant, stapler, torussmall, cylindersmall, torusmedium, cubelarge, binoculars, train, mug, fryingpan, headphones, spheremedium, piggybank, watch ]
+#
+#val_conditions:
+#  subj_id: null
+#  intent: null
+#  obj_name: [ lightbulb, waterbottle, knife, toothbrush, flashlight, toothpaste, doorknob, airplane, spherelarge, hammer ]
+#
+#test_conditions:
+#  subj_id: null
+#  intent: null
+#  obj_name: [ alarmclock, banana, eyeglasses, hand, stamp, cylindermedium, cubemedium, flute, cubesmall, cylinderlarge ]
